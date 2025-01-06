@@ -33,11 +33,6 @@ in {
     nixpkgs.hostPlatform = lib.mkDefault "x86_64-linux";
 
     boot = {
-      loader = {
-        systemd-boot.enable = true;
-        efi.canTouchEfiVariables = true;
-      };
-
       zfs = {
         devNodes = "/dev/disk/by-label";
         extraPools = [ "zpool" ];

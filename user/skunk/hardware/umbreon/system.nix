@@ -9,6 +9,13 @@ in {
     hostname = "umbreon";
     swapDevices = [ ];
 
+    boot.loader.grub = {
+      enable = true;
+
+      device = "/dev/sda";
+      zfsSupport = true;
+    };
+
     boot.initrd = {
       luks.devices.cryptroot.device = "/dev/sda2";
       postDeviceCommands = lib.mkAfter ''
