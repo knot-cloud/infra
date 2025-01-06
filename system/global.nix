@@ -140,11 +140,11 @@
 
 		hardware = {
 			bluetooth = {
-				enable = lib.mkDefault true;
+				enable = lib.mkDefault false;
 				powerOnBoot = lib.mkDefault false;
 			};
 
-			graphics.enable = lib.mkDefault true;
+			graphics.enable = lib.mkDefault false;
 		};
 
 		programs = {
