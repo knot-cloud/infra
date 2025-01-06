@@ -1,5 +1,8 @@
-{ ... }:
-{
+{ pkgs, ... }:
+let
+  lib = pkgs.lib;
+
+in {
   system = {
     imports = [ ./hardware.nix ];
 
