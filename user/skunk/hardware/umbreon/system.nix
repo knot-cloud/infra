@@ -11,6 +11,12 @@
       postDeviceCommands = lib.mkAfter ''
         zfs destroy zpool/root
         zfs create -o mountpoint=legacy zpool/root
+
+	mkdir /tmp_root
+	mount -t zfs zpool/root /tmp_root
+	mkdir -p /tmp_root/root/keys
+	umount /tmp_root
+	rm /tmp_root
       '';
     };
 
