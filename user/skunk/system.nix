@@ -1,7 +1,5 @@
-{ pkgs, ... }:
+{ pkgs, lib, ... }:
 let
-  lib = pkgs.lib;
-
   skunkKeys = [
     "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIAqmDqRIyYfc7+Et/uj8BAbJuOy7B3GpV0MKNegeKCT3"
     "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIMTD93FB+x5mcKXvaEI8piYJUgAcfKTHiGrSf2gm3Cq2"
